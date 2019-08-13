@@ -8,9 +8,9 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.new
 
     if @comment.save
-      redirect_to comments_path, success: '投稿に成功しました'
+      redirect_to topics_path, success: 'コメントしました'
     else
-      flash.now[:danger] = "投稿に失敗しました"
+      flash.now[:danger] = "コメントできませんでした"
       render :new
     end
   end

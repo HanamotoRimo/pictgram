@@ -17,6 +17,8 @@ class TopicsController < ApplicationController
       render :new
     end
   end
+  
+  
 
   private
   def topic_params

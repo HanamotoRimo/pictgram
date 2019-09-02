@@ -1,6 +1,8 @@
 class Comment < ApplicationRecord
   
+  validates :description, presence: true
+  
   belongs_to :user
-  belongs_to :topic
+  belongs_to :topic ,optional: true
   
 end
